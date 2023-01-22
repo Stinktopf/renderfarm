@@ -33,6 +33,7 @@
   crontab -l > mycron; echo "@reboot $HOME/Rendering/init/worker.sh\n*/10 * * * * $HOME/Rendering/init/reconcileWorker.sh" >> mycron; crontab mycron
   ```
   This code ensures that when a render node has been restarted, the worker process gets started again. It also checks every 10 minutes if the worker process has crashed and restarts it if necessary.
+
 5. After ten minutes at most, the workers should be visible in the Flamenco web interface.
 6. To uninstall the whole thing, remove the created cronjobs from the crontab using a code editor like VIM:
   ```shell
