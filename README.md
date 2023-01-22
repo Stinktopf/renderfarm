@@ -9,9 +9,9 @@
 
 ## Disclaimer
 
-Please refer to the [official Flamenco installation](https://flamenco.blender.org/usage/quickstart/) guide if you do not understand exactly what the code in this repository does.
+- Please refer to the [official Flamenco installation](https://flamenco.blender.org/usage/quickstart/) guide if you do not understand exactly what the code in this repository does.
 
-
+- This repository is **not** an official repository of Flamenco.
 
 ## Setup
 
