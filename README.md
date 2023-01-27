@@ -22,6 +22,7 @@
   ./renderfarm/setup.sh
   ```
 
+3. Please install [jq 1.6 64-bit](https://stedolan.github.io/jq/download/) in the **$HOME/Rendering/init/** directory.
 3. Run the following command on the manager node:
   ```shell
    crontab -l > mycron; echo "@reboot $HOME/Rendering/init/manager.sh" >> mycron; crontab mycron
