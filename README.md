@@ -25,13 +25,13 @@
 3. Please install [jq 1.6 64-bit](https://stedolan.github.io/jq/download/) in the **$HOME/Rendering/init/** directory.
 3. Run the following command on the manager node:
   ```shell
-   crontab -l > mycron; echo "@reboot $HOME/Rendering/init/manager.sh" >> mycron; crontab mycron
+   crontab -l > mycron; echo -e "@reboot $HOME/Rendering/init/manager.sh" >> mycron; crontab mycron
   ```
   This code ensures that when a render node has been restarted, the manager process gets started again.
 
 4. Run the following command on every worker node:
   ```shell
-  crontab -l > mycron; echo "@reboot $HOME/Rendering/init/worker.sh\n*/10 * * * * $HOME/Rendering/init/reconcileWorker.sh" >> mycron; crontab mycron
+  crontab -l > mycron; echo -e "@reboot $HOME/Rendering/init/worker.sh\n*/10 * * * * $HOME/Rendering/init/reconcileWorker.sh" >> mycron; crontab mycron
   ```
   This code ensures that when a render node has been restarted, the worker process gets started again. It also checks every 10 minutes if the worker process has crashed and restarts it if necessary.
 
