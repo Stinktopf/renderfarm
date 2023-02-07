@@ -2,7 +2,7 @@
 
 SCREEN_NAME="flamenco-worker"
 DATE=$(date)
-MANAGER_URL="<manager_ip:8080"
+MANAGER_URL="<manager_ip>:8080"
 
 # Pruefen auf beendeten Prozess
 if ! screen -list | grep -q $SCREEN_NAME; then
