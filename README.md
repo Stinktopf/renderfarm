@@ -16,6 +16,10 @@
 ## Setup
 
 1. Clone and open the repository.
+  ```shell
+  git clone https://github.com/Stinktopf/renderfarm.git
+  ```
+
 2. Make the setup.sh executable:
   ```shell
   chmod 744 ./renderfarm/setup.sh
