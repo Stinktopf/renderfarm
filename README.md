@@ -35,7 +35,7 @@
   ```
   This code ensures that when a render node has been restarted, the manager process gets started again.
 
-5. Run the following command on every worker node:
+5. Please set the <manager_ip> in reconcileWorker.sh and run the following command on every worker node :
   ```shell
   crontab -l > mycron; echo -e "@reboot $HOME/Rendering/init/worker.sh\n*/10 * * * * $HOME/Rendering/init/reconcileWorker.sh" >> mycron; crontab mycron
   ```
