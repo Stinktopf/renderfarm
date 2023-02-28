@@ -13,6 +13,9 @@ mkdir $INSTALL_PATH/flamenco/software
 # Copy scripts from repository to init folder
 cp -r ./scripts/* $INSTALL_PATH/init/
 
+# Make the script executable
+chmod -R 744 $INSTALL_PATH/init/
+
 # Download Flamenco
 cd $INSTALL_PATH
 wget -c $FLAMENCO_SOURCE -O - | tar -xz
