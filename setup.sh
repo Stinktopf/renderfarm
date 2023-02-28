@@ -3,7 +3,7 @@ INSTALL_PATH=$HOME/Rendering
 FLAMENCO_SOURCE=https://flamenco.blender.org/downloads/flamenco-3.1-linux-amd64.tar.gz
 
 # Create Directorys
-mkdir $installPath
+mkdir $INSTALL_PATH
 mkdir $INSTALL_PATH/init
 mkdir $INSTALL_PATH/flamenco
 mkdir $INSTALL_PATH/flamenco/project
