@@ -36,7 +36,7 @@
   This code ensures that when a render node has been restarted, the worker process gets started again. It also checks every 10 minutes if the worker process has crashed and restarts it if necessary.
 
 5. After ten minutes at most, the workers should be visible in the Flamenco web interface.
-6. To uninstall the whole thing, remove the created cronjobs from the cron using a code editor like VIM:
+6. To uninstall the whole thing, remove the created cronjobs from the cron using a code editor like VIM (or remove all cronjobs by replacing the contents of reconcileWorker.sh with crontab -r):
   ```shell
   crontab -e
   ```
