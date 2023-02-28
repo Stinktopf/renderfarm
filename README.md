@@ -25,22 +25,20 @@
   ```shell
   ./renderfarm/setup.sh
   ```
-
-4. Please install [jq 1.6 64-bit](https://stedolan.github.io/jq/download/) in the **$HOME/Rendering/init/** directory.
-5. Run the following command on the manager node:
+4. Run the following command on the manager node:
   ```shell
    crontab -l > mycron; echo -e "@reboot $HOME/Rendering/init/manager.sh" >> mycron; crontab mycron
   ```
   This code ensures that when a render node has been restarted, the manager process gets started again.
 
-6. Run the following command on every worker node:
+5. Run the following command on every worker node:
   ```shell
   crontab -l > mycron; echo -e "@reboot $HOME/Rendering/init/worker.sh\n*/10 * * * * $HOME/Rendering/init/reconcileWorker.sh" >> mycron; crontab mycron
   ```
   This code ensures that when a render node has been restarted, the worker process gets started again. It also checks every 10 minutes if the worker process has crashed and restarts it if necessary.
 
-7. After ten minutes at most, the workers should be visible in the Flamenco web interface.
-8. To uninstall the whole thing, remove the created cronjobs from the cron using a code editor like VIM (or remove all cronjobs by replacing the contents of reconcileWorker.sh with crontab -r):
+6. After ten minutes at most, the workers should be visible in the Flamenco web interface.
+7. To uninstall the whole thing, remove the created cronjobs from cron using a code editor like VIM (or remove all cronjobs by replacing the contents of reconcileWorker.sh with crontab -r):
   ```shell
   crontab -e
   ```
